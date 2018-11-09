@@ -1,0 +1,19 @@
+<%- include('../header') %>
+
+<br/>
+<div class="container">
+    <form method="POST" action="/publicacoes/editar/<%= categoria %>/<%= publicacoes.id %>">
+        <div class="form-group">
+                <label for="titulo">Título</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" value="<%= publicacoes.titulo %>"/>        
+        </div>                 
+        <div class="form-group">
+                <label for="conteudo">Conteúdo</label>
+                <textarea class="form-control" id="conteudo" name="conteudo"><%= publicacoes.conteudo %></textarea>        
+        </div>  
+        <button type="submit" class="btn btn-info">Salvar</button>
+    </form>       
+</div>
+<%- include('../footer') %>
+
+
