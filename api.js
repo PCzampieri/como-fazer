@@ -2,6 +2,7 @@ const axios = require('axios')
 const baseURL = 'https://como-fazer-pc.firebaseio.com/'
 const auth = 'M7Z7ak0YubDAEXK4FwbztjEWkdfz72M1AlTx1qiX'
 
+
 const list = async(key) => { 
     const content = await axios.get(baseURL+key+'.json?auth='+auth)
     if(content.data) {
